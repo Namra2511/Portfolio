@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 
 interface ProjectDetail {
@@ -22,6 +22,18 @@ interface Props {
 }
 
 const ProjectDetailModal = ({ project, onClose }: Props) => {
+    useEffect(() => {
+        if (project) {
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        return () => {
+            // Re-enable body scroll when modal closes
+            document.body.style.overflow = 'unset';
+        };
+    }, [project]);
+
     if (!project) return null;
 
     return (
@@ -70,7 +82,7 @@ const ProjectDetailModal = ({ project, onClose }: Props) => {
                         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
                             <span className="text-[#7042f8]">📋</span>
                             <span className="text-glow">Project</span>
-                            <span className="text-gradient-advanced ml-1">Overview</span>
+                            <span className="text-glow ml-1">Overview</span>
                         </h2>
                         <p className="text-gray-300 leading-relaxed">{project.description}</p>
                     </div>
@@ -81,7 +93,7 @@ const ProjectDetailModal = ({ project, onClose }: Props) => {
                             <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
                                 <span className="text-[#7042f8]">🏗️</span>
                                 <span className="text-glow">Architecture</span>
-                                <span className="text-gradient-advanced ml-1">Overview</span>
+                                <span className="text-glow ml-1">Overview</span>
                             </h2>
                             <p className="text-gray-300 leading-relaxed">{project.architecture}</p>
                         </div>
@@ -93,7 +105,7 @@ const ProjectDetailModal = ({ project, onClose }: Props) => {
                             <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
                                 <span className="text-[#7042f8]">⚙️</span>
                                 <span className="text-glow">Implementation</span>
-                                <span className="text-gradient-advanced ml-1">Details</span>
+                                <span className="text-glow ml-1">Details</span>
                             </h2>
                             <ul className="space-y-2">
                                 {project.implementation.map((item, index) => (
@@ -114,7 +126,7 @@ const ProjectDetailModal = ({ project, onClose }: Props) => {
                                     <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
                                         <span className="text-[#7042f8]">📊</span>
                                         <span className="text-glow">Monitoring &</span>
-                                        <span className="text-gradient-advanced ml-1">Observability</span>
+                                        <span className="text-glow ml-1">Observability</span>
                                     </h2>
                                     <p className="text-gray-300 leading-relaxed">{project.monitoring}</p>
                                 </div>
@@ -125,7 +137,7 @@ const ProjectDetailModal = ({ project, onClose }: Props) => {
                                     <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
                                         <span className="text-[#7042f8]">🔒</span>
                                         <span className="text-glow">Security &</span>
-                                        <span className="text-gradient-advanced ml-1">Infrastructure</span>
+                                        <span className="text-glow ml-1">Infrastructure</span>
                                     </h2>
                                     <p className="text-gray-300 leading-relaxed">{project.security}</p>
                                 </div>
@@ -139,7 +151,7 @@ const ProjectDetailModal = ({ project, onClose }: Props) => {
                             <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
                                 <span className="text-[#7042f8]">🛠️</span>
                                 <span className="text-glow">Tools &</span>
-                                <span className="text-gradient-advanced ml-1">Technology Stack</span>
+                                <span className="text-glow ml-1">Technology Stack</span>
                             </h2>
                             <div className="flex flex-wrap gap-2">
                                 {project.techStack.map((tech, index) => (
@@ -160,7 +172,7 @@ const ProjectDetailModal = ({ project, onClose }: Props) => {
                             <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
                                 <span className="text-[#7042f8]">🎯</span>
                                 <span className="text-glow">Results</span>
-                                <span className="text-gradient-advanced ml-1">Achieved</span>
+                                <span className="text-glow ml-1">Achieved</span>
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 {project.results.map((result, index) => (
