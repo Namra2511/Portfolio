@@ -4,7 +4,7 @@ import {
     Backend_skill,
     DevTools,
     Frontend_skill,
-	libraries,
+    libraries,
 } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";

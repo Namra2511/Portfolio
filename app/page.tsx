@@ -6,8 +6,8 @@ import Contact from "@/components/main/Contact";
 import Certifications from "@/components/main/Certifications";
 
 export default function Home() {
-    return (
-        <main className="h-full w-full">
+	return (
+		<main className="h-full w-full">
 			<div className="flex flex-col gap-20">
 				<Hero />
 				<Skills />
@@ -16,6 +16,6 @@ export default function Home() {
 				<Certifications />
 				<Contact />
 			</div>
-        </main>
-    );
+		</main>
+	);
 }  
