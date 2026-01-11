@@ -19,10 +19,10 @@ const About = () => {
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={slideInFromTop}
-                            className="text-[40px] pt-[5rem] pb-3 md:p-0 font-medium text-center text-gray-200 z-50"
+                            className="text-[40px] md:text-[50px] pt-[5rem] pb-3 md:p-0 font-extrabold text-center text-white z-50 tracking-tight"
                         >
-                            About
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                            <span className="text-glow">About</span>
+                            <span className="text-gradient-advanced ml-2">
                                 {" "}
                                 Me{" "}
                             </span>
@@ -31,68 +31,29 @@ const About = () => {
                 </InView>
             </div>
 
-            <div className="flex flex-col items-center justify-start relative md:mt-[90px] lg:mt-12 z-[20] w-auto h-auto">
+            <div className="flex flex-col items-center justify-center relative md:mt-[150px] lg:mt-20 z-[20] w-auto h-auto min-h-[400px]">
                 <InView triggerOnce={false}>
                     {({ inView, ref }) => (
                         <motion.div
                             ref={ref}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
-                            variants={slideInFromLeft(0.5)}
-                            className="flex flex-col items-center w-auto h-auto rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500"
+                            variants={slideInFromTop}
+                            className="glassmorphism-container w-full max-w-4xl mx-auto p-12 rounded-3xl border border-[#7042f84d] backdrop-blur-xl bg-[#0300145e] shadow-[0_8px_32px_0_rgba(112,66,248,0.3)] text-center"
                         >
-                            <img src="/jenin.jpg" alt="profile" width={250} />
-                        </motion.div>
-                    )}
-                </InView>
-
-                <InView triggerOnce={false}>
-                    {({ inView, ref }) => (
-                        <motion.div
-                            ref={ref}
-                            initial="hidden"
-                            animate={inView ? "visible" : "hidden"}
-                            variants={slideInFromRight(0.5)}
-                            className="Welcome-box px-[15px] py-[8px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]"
-                        >
-                            <h1 className="Welcome-text text-[20px] font-bold">
-                                Jenin Joseph
-                            </h1>
-                        </motion.div>
-                    )}
-                </InView>
-
-                <InView triggerOnce={false}>
-                    {({ inView, ref }) => (
-                        <motion.div
-                            ref={ref}
-                            initial="hidden"
-                            animate={inView ? "visible" : "hidden"}
-                            variants={slideInFromBottom}
-                            className="Welcome-box px-[15px] w-[90%] md:w-3/4 py-[8px] z-[20] brder mb-[20px] border-[#7042f88b] opacity-[0.9]"
-                        >
-                            <h1 className="Welcome-text text-[16px] w-full text-justify">
-                                As a passionate Full Stack Developer with
-                                expertise in React, TypeScript, Django, REST,
-                                HTML, and CSS, I excel in crafting seamless
-                                digital experiences. My journey includes roles
-                                as a MuLearn Intern, Union Chairman at SNGIST,
-                                and CEO at SNGIST IEDC, where I&apos;ve driven
-                                innovation and led digital transformations. As a
-                                leader, I&apos;ve empowered teams towards
-                                excellence and fostered an entrepreneurial
-                                spirit. I&apos;m keen to connect with
-                                like-minded tech enthusiasts and visionaries to
-                                explore new opportunities and push the
-                                boundaries of innovation.
-                            </h1>
+                            <h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 mb-4 tracking-tight text-glow">
+                                Welcome to My Portfolio
+                            </h2>
+                            <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-medium">
+                                Explore my DevOps journey and connect with me through the contact section below.
+                            </p>
                         </motion.div>
                     )}
                 </InView>
             </div>
             <div className="absolute z-[20] bottom-[-4rem] md:bottom-[10px] px-[5px]">
-                <div className="cursive text-[20px] font-medium text-center text-gray-300">
-                    Shaping Tomorrow with Code and Creativity
+                <div className="cursive text-[22px] md:text-[24px] font-semibold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 text-glow-purple tracking-wide">
+                    Building Tomorrow with Infrastructure and Automation
                 </div>
             </div>
 

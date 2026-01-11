@@ -1,4 +1,3 @@
-import { Socials } from "@/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -8,53 +7,39 @@ const Navbar = () => {
             <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[0px] md:px-[10px]">
                 <a
                     href="#home"
-                    className="h-auto w-auto flex flex-row items-center"
+                    className="h-auto w-auto flex flex-row items-center group transition-all duration-300 hover:scale-105"
                 >
                     <Image
                         src="/logo.png"
                         alt="logo"
                         width={50}
                         height={50}
-                        className="cursor-pointer hover:animate-spin w-10"
+                        className="cursor-pointer transition-all duration-300 group-hover:rotate-180 group-hover:drop-shadow-[0_0_15px_rgba(112,66,248,0.6)] w-10"
                     />
 
-                    <span className="font-bold ml-[10px] block text-gray-300 z-50 md:text-lg text-xl">
-                        Jenin Joseph
+                    <span className="font-extrabold ml-[10px] block text-white z-50 md:text-lg text-xl transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 tracking-wide">
+                        Namra Patel
                     </span>
                 </a>
 
-                <div className="hidden w-3/6 lg:w-1/3 h-full md:flex flex-row items-center justify-between md:mx-auto lg:pr-12">
-                    <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-                        <a href="#about" className="cursor-pointer">
-                            About me
-                        </a>
-                        <a href="#skills" className="cursor-pointer">
+                <div className="hidden w-3/6 lg:w-2/5 h-full md:flex flex-row items-center justify-between md:mx-auto lg:pr-12">
+                    <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 transition-all duration-300 hover:border-[#7042f8] hover:shadow-[0_0_15px_rgba(112,66,248,0.3)] gap-4">
+                        <a href="#skills" className="cursor-pointer transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 whitespace-nowrap">
                             Skills
                         </a>
-                        <a href="#projects" className="cursor-pointer">
+                        <a href="#services" className="cursor-pointer transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 whitespace-nowrap">
+                            Services
+                        </a>
+                        <a href="#projects" className="cursor-pointer transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 whitespace-nowrap">
                             Projects
                         </a>
-                    </div>
-                </div>
-
-                <div className="flex flex-row gap-5 text-white">
-                    {Socials.map((social) => (
-                        <a
-                            href={social.link}
-                            key={social.name}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Image
-                                src={social.src}
-                                alt={social.name}
-                                key={social.name}
-                                width={24}
-                                height={24}
-								className="cursor-pointer hover:animate-spin"
-                            />
+                        <a href="#certifications" className="cursor-pointer transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 whitespace-nowrap">
+                            Certifications
                         </a>
-                    ))}
+                        <a href="#contact" className="cursor-pointer transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 whitespace-nowrap">
+                            Contact
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

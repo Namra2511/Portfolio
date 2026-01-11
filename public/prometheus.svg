@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <circle cx="256" cy="256" r="200" fill="#E6522C"/>
+  <circle cx="256" cy="256" r="150" fill="#FFF" fill-opacity="0.1"/>
+  <text x="256" y="290" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#FFF" text-anchor="middle">P</text>
+  <path d="M256 200 L280 260 L220 260 Z" fill="#FFF"/>
+</svg>
+
