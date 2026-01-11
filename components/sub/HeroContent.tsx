@@ -57,22 +57,24 @@ const HeroContent = () => {
                                         variants={slideInFromLeft(0.8)}
                                         className="text-base md:text-lg text-gray-300 my-5 max-w-[650px] z-30 font-medium leading-relaxed"
                                     >
-                                        <li className="mb-3">
-                                            <span className="text-gray-400 mr-2">▸</span>
-                                            Expert in CI/CD pipelines and automation
-                                        </li>
-                                        <li className="mb-3">
-                                            <span className="text-gray-400 mr-2">▸</span>
-                                            Cloud infrastructure management (AWS, Azure, GCP)
-                                        </li>
-                                        <li className="mb-3">
-                                            <span className="text-gray-400 mr-2">▸</span>
-                                            Container orchestration with Kubernetes and Docker
-                                        </li>
-                                        <li className="mb-3">
-                                            <span className="text-gray-400 mr-2">▸</span>
-                                            Infrastructure as Code with Terraform and Ansible
-                                        </li>
+                                        <ul className="list-none">
+                                            <li className="mb-3">
+                                                <span className="text-gray-400 mr-2">▸</span>
+                                                Expert in CI/CD pipelines and automation
+                                            </li>
+                                            <li className="mb-3">
+                                                <span className="text-gray-400 mr-2">▸</span>
+                                                Cloud infrastructure management (AWS, Azure, GCP)
+                                            </li>
+                                            <li className="mb-3">
+                                                <span className="text-gray-400 mr-2">▸</span>
+                                                Container orchestration with Kubernetes and Docker
+                                            </li>
+                                            <li className="mb-3">
+                                                <span className="text-gray-400 mr-2">▸</span>
+                                                Infrastructure as Code with Terraform and Ansible
+                                            </li>
+                                        </ul>
                                     </motion.div>
                                 )}
                             </InView>
